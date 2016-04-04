@@ -45,7 +45,7 @@ Open ./data/config.lua and add your ID to the "sudo_users" section in the follow
 
 # Speclal thanks For MOHAMED DEVT
 
-Dev Channel
+# Dev Channel
 
 @linuxch
 
