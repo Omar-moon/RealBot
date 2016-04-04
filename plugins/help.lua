@@ -106,7 +106,7 @@ return {
   description = "Shows bot help", 
   -- usage = /help: Shows bot help",
   patterns = {
-    "^help$"
+    "^/help$"
   }, 
   run = run 
 }
