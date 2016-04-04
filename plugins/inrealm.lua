@@ -740,7 +740,7 @@ function run(msg, matches)
 		end
  	end
 
-    if matches[1] == 'creategroup' and matches[2] then
+    if matches[1] == 'newgroup' and matches[2] then
         group_name = matches[2]
         group_type = 'group'
         return create_group(msg)
@@ -1055,7 +1055,7 @@ end
 
 return {
   patterns = {
-    "^[#!/](creategroup) (.*)$",
+    "^[#!/](newgroup) (.*)$",
 	"^[#!/](createsuper) (.*)$",
     "^[#!/](createrealm) (.*)$",
     "^[#!/](setabout) (%d+) (.*)$",
