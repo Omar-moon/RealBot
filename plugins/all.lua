@@ -1,3 +1,12 @@
+--[[
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀    BY OmarRea;                       ▀▄ ▄▀ 
+▀▄ ▄▀     BY OmarReal (Omar_Real7)         ▀▄ ▄▀ 
+▀▄ ▄▀ JUST WRITED BY OmarReal              ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
 do
 local function get_msgs_user_chat(user_id, chat_id)
   local user_info = {}
