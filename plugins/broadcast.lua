@@ -1,3 +1,13 @@
+--[[
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀    BY OmarRea;                       ▀▄ ▄▀ 
+▀▄ ▄▀     BY OmarReal (Omar_Real7)         ▀▄ ▄▀ 
+▀▄ ▄▀ JUST WRITED BY OmarReal              ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
+
 local function run(msg, matches)
 	if matches[1] == 'bc' and is_admin1(msg) then
 		local response = matches[3]
