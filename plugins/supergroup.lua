@@ -1300,7 +1300,7 @@ local function run(msg, matches)
 			end
 		end
 
-		if matches[1] == 'link' then
+		if matches[1] == 'getlink' then
 			if not is_momod(msg) then
 				return
 			end
@@ -2033,7 +2033,7 @@ return {
 	"^[#!/]([Kk]ick) (.*)$",
 	"^[#!/]([Rr]elink)$",
 	"^[#!/]([Ss]etlink)$",
-	"^[#!/]([Ll]ink)$",
+	"^[#!/]([Gg]etlink)$",
 	"^[#!/]([Rr]es) (.*)$",
 	"^[#!/]([Ss]etadmin) (.*)$",
 	"^[#!/]([Ss]etadmin)",
