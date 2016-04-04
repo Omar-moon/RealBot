@@ -62,23 +62,22 @@ function run(msg, matches)
 ➖🔸➖🔹➖🔸➖🔹➖
 ✅ - Commands for group
 ➖🔸➖🔹➖🔸➖🔹➖
-♣️ - /close|open links : منع الروابط والاعلانات
-♣️ - /close|open photo : منع الصور
-♣️ - /close|open sticker : منع ملصقات
-♣️ - /close|open arabic : منع الغة العربية
-♣️ - /close|open gifs : منع الصور المتحركة
-♣️ - /close|open audio : منع بصمات
-♣️ - /close|open video : منع فديوات
-♣️ - /close|open text
-♣️ - /close|open contacts
-♣️ - /close|open chat
-♣️ - /bot lock |unlock : لمنع البوتات
-♣️ - /close|open spam : منع الكلايش الطويلة
-♣️ - /close|open flood : قفل التكرار
+♣️ - /lock|unlock links : منع الروابط والاعلانات
+♣️ - /mmute|unmute photo : منع الصور
+♣️ - /lock|unlock sticker : منع ملصقات
+♣️ - /lock|unlock  arabic : منع الغة العربية
+♣️ - /mmute|unmute gifs : منع الصور المتحركة
+♣️  -/mmute|unmute- audio : منع بصمات
+♣️ - /mmute|unmute video : منع فديوات
+♣️ - /lock|unlock contacts
+♣️ - /mmute|unmute  all
+♣️ - /bot lock|unlock : لمنع البوتات
+♣️ - /lock|unlock spam : منع الكلايش الطويلة
+♣️ -  /lock|unlock flood : قفل التكرار
 ♣️ - /setflood [5-20] تحديد عدد التكرار من
 ♣️ - /lock|unlock rtl : منع الاضافة الجماعية
-♣️ - /close|open documents : لقفل الوسائط
-♣️ - /close|open text : لقفل النص
+♣️ - /mmute|unmute documents : لقفل الوسائط
+♣️ - /mmute|unmute text : لقفل النص
 ♣️ - /setusername : وضع معرف للمجموعة
 ♣️ - /del : لحذف اي رسالة بل رد
 ♣️ - /block + الكلمة  : لحضر كلمة معينة
