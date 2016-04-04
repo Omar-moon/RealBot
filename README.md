@@ -40,3 +40,13 @@ Open ./data/config.lua and add your ID to the "sudo_users" section in the follow
     YourID
   }
 ```
+
+# Speclal thanks For mustafa Ip
+
+# Speclal thanks For MOHAMED DEVT
+
+Dev Channel
+
+@linuxch
+
+@iq_dev8
