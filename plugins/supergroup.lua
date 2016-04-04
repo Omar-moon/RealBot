@@ -555,7 +555,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings⚙:\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "Group settings⚙:\n◼️Lock links : "..settings.lock_link.."\n◼️Lock flood: "..settings.flood.."\n◼️Flood sensitivity : "..NUM_MSG_MAX.."\n◼️Lock spam: "..settings.lock_spam.."\n◼️Lock Arabic: "..settings.lock_arabic.."\n◼️Lock Member: "..settings.lock_member.."\n◼️Lock RTL: "..settings.lock_rtl.."\n◼️Lock Tgservice : "..settings.lock_tgservice.."\n◼️Lock sticker: "..settings.lock_sticker.."\n◼️Public: "..settings.public.."\n◼️Strict settings: "..settings.strict
   return text
 end
 
@@ -717,7 +717,7 @@ function get_message_callback(extra, success, result)
 		end
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] demoted: ["..user_id.."] from admin by reply")
 		send_large_msg(channel_id, text)
-	elseif get_cmd == "setowner" then
+	elseif get_cmd == "spromote" then
 		local group_owner = data[tostring(result.to.peer_id)]['set_owner']
 		if group_owner then
 		local channel_id = 'channel#id'..result.to.peer_id
@@ -731,9 +731,9 @@ function get_message_callback(extra, success, result)
 			save_data(_config.moderation.data, data)
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] set: ["..result.from.peer_id.."] as owner by reply")
 			if result.from.username then
-				text = "@"..result.from.username.." [ "..result.from.peer_id.." ] added as owner"
+				text = "@"..result.from.username.." [ "..result.from.peer_id.." ] added as leader"
 			else
-				text = "[ "..result.from.peer_id.." ] added as owner"
+				text = "[ "..result.from.peer_id.." ] added as leader"
 			end
 			send_large_msg(channel_id, text)
 		end
@@ -976,7 +976,7 @@ if get_cmd == "channel_block" then
         return send_large_msg("channel#id"..channel_id, "Leave using kickme command")
       end
       if is_momod2(user_id, channel_id) and not is_admin2(sender) then
-        return send_large_msg("channel#id"..channel_id, "You can't kick mods/owner/admins")
+        return send_large_msg("channel#id"..channel_id, "You can't kick mods/leader/admins")
       end
       if is_admin2(user_id) then
         return send_large_msg("channel#id"..channel_id, "You can't kick other admins")
@@ -1154,7 +1154,7 @@ local function run(msg, matches)
 			admins = channel_get_admins(receiver,callback, {receiver = receiver, msg = msg, member_type = member_type})
 		end
 
-		if matches[1] == "/leader" then
+		if matches[1] == "leader" then
 			local group_owner = data[tostring(msg.to.id)]['set_owner']
 			if not group_owner then
 				return "no Leader,ask admins in support groups to set leader for your SuperGroup"
@@ -1406,7 +1406,7 @@ local function run(msg, matches)
 		if matches[1] == 'spromote' and is_owner(msg) then
 			if type(msg.reply_id) ~= "nil" then
 				local cbreply_extra = {
-					get_cmd = 'speomote',
+					get_cmd = 'spromote',
 					msg = msg
 				}
 				setowner = get_message(msg.reply_id, get_message_callback, cbreply_extra)
@@ -1430,7 +1430,7 @@ local function run(msg, matches)
 				local	msg = msg
 				local user_id = matches[2]
 				channel_get_users (receiver, in_channel_cb, {get_cmd=get_cmd, receiver=receiver, msg=msg, user_id=user_id})
-			elseif matches[1] == 'speomote' and not string.match(matches[2], '^%d+$') then
+			elseif matches[1] == 'spromote' and not string.match(matches[2], '^%d+$') then
 				local	get_cmd = 'spromote'
 				local	msg = msg
 				local username = matches[2]
@@ -2020,7 +2020,6 @@ return {
 	"^[#!/]([Aa]dd)$",
 	"^[#!/]([Rr]em)$",
 	"^[#!/]([Mm]ove) (.*)$",
-	"^[#!/]([Ii]nfo)$",
 	"^[#!/]([Aa]dmins)$",
 	"^[#!/]([Ll]eader)$",
 	"^[#!/]([Mm]odlist)$",
@@ -2030,8 +2029,6 @@ return {
         "^[#!/]([Bb]lock) (.*)",
 	"^[#!/]([Bb]lock)",
 	"^[#!/]([Tt]osuper)$",
-	"^[#!/]([Ii][Dd])$",
-	"^[#!/]([Ii][Dd]) (.*)$",
 	"^[#!/]([Kk]ickme)$",
 	"^[#!/]([Kk]ick) (.*)$",
 	"^[#!/]([Rr]elink)$",
