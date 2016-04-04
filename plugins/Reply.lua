@@ -1,4 +1,4 @@
--- made by { @Mouamle }
+-- made by { @Omar_Real }
 do
 ws = {}
 rs = {}
@@ -42,9 +42,9 @@ function run( msg, matches )
 	
 	-- don't edit this section
 	if ( msg.text == "about" ) then
-		if ( msg.from.username == "Mouamle" ) then
+		if ( msg.from.username == "OmarReal" ) then
 			R = get_receiver(msg)
-			send_large_msg ( R , "Made by @Mouamle" );
+			send_large_msg ( R , "Made by @OmarReal7" );
 		end
 	end 
 
