@@ -6,7 +6,6 @@ do local _ = {
     "id2",
     "info",
     "ingroup",
-    "addbot",
     "addsudo",
     "isup",
     "isup1",
